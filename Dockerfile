@@ -10,10 +10,7 @@ WORKDIR /home/jhipster/app
 
 RUN chmod +x mvnw
 
-RUN ./mvnw clean install
-
-# Construye la aplicación usando Maven
-RUN ./mvnw package -DskipTests
+RUN ./mvnw clean install -DskipTests
 
 # Expone el puerto en el que la aplicación correrá
 EXPOSE 8080
