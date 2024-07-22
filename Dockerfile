@@ -10,6 +10,8 @@ WORKDIR /home/jhipster/app
 
 RUN chmod +x mvnw
 
+RUN ./mvnw clean install
+
 # Construye la aplicación usando Maven
 RUN ./mvnw package -DskipTests
 
